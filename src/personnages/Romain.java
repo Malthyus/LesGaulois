@@ -5,6 +5,7 @@ public class Romain {
 	private int force;
 	public Romain(String nom, int force) {
 		super();
+		assert force>=0;
 		this.nom = nom;
 		this.force = force;
 	}

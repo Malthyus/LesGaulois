@@ -35,7 +35,7 @@ public class Village {
 	public static void main(String[] args) {
 		Village village= new Village("Village des Irréductibles",30);
 //		Gaulois gaulois = village.trouverHabitant(30);
-		// On a une erreur par ce qu'on à donner un numéro qui comme indice n'appartient pas au tableau
+		// On a une erreur par ce qu'on à donner un numéro qui comme une indice n'appartient pas au tableau
 		Chef abraracourcix = new Chef("Abraracourcix",6,village);
 		village.setChef(abraracourcix);
 		Gaulois asterix = new Gaulois("Astérix",8);
@@ -43,7 +43,7 @@ public class Village {
 //		Gaulois gaulois = village.trouverHabitant(1);
 //		System.out.println(gaulois);
 //		ça affiche null car villageois[1] n'a pas encore était défini
-		Gaulois obelix = new Gaulois("Obélix",20);
+		Gaulois obelix = new Gaulois("Obélix",25);
 		village.ajouterHabitant(obelix);
 		village.afficherVillageois();
 	}
