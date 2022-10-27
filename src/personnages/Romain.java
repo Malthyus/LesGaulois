@@ -6,6 +6,7 @@ public class Romain {
 	private int force;
 	private Equipement[] equipement;
 	private int nbEquipement =0;
+	private int usageEquipement = 0;
 	public Romain(String nom, int force) {	
 		super();
 		assert force>=0;
@@ -104,10 +105,14 @@ public class Romain {
 					resistanceEquipement += 5;
 				}
 			}
+			resistanceEquipement-=this.usageEquipement;
 			texte += resistanceEquipement + "!";
+			if(resistanceEquipement!=0) {
+				usageEquipement++;
+			}
 		}
 		parler(texte);
-		if(resistanceEquipement>forceCoup) {
+		if(resistanceEquipement>=forceCoup) {
 			forceCoup=0;
 		}
 		else {
